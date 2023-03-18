@@ -14,11 +14,12 @@
     <title>Портфолио Junior верстальщика</title>
   </head>
 
-  <body>
+  <body id="body">
     <header class="page-header">
       <div class="container">
         <a class="header-email" href="mailto:enot_neopoznanniy@mail.com"><i class="fa-regular fa-envelope"></i> enot_neopoznanniy@mail.com</a>
         <a class="header-phone" href="tel:+79876543210"><i class="fa-solid fa-phone"></i> +7 987 654 32 10</a>
+        <button id="theme-switcher" onclick="SwitchTheme()">Сменить тему</button>
       </div>
     </header>
 
@@ -59,5 +60,10 @@
         <a class="footer-phone" href="tel:+79876543210">+7 987 654 32 10</a>
       </div>
     </footer>
+    <script>
+      function SwitchTheme(){
+        document.getElementById("body").classList.toggle("black-theme")
+      }
+    </script>
   </body>
 </html>
