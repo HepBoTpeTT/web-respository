@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.tour-container{
+    width: 540px;
+    display: grid;
+    grid-template-areas: 
+                "header"
+                "days"
+                "footer";
+    background: #ffb0dc;
+}
+.tour-header{
+    grid-area: header;
+    display: grid;
+    grid-template-areas: "text comment";
+    grid-template-columns: auto 160px;
+    padding: 30px 20px 70px 20px;
+    column-gap: 20px;
+    background: linear-gradient(to bottom, #f5eaf0, #f5eaf0, #f5eaf0, #f5eaf0, #ffb0dc);
+}
+.tour-text{
+    color: #ef2ebd;
+    font-size: 34px;
+}
+.tour-text span{
+    color: #343233;
+    font-weight: bold;
+}
+.client-comment{
+    background: #fdd5f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-comment p{
+    font-size: 18px;
+    font-weight: bold;
+    color: #343233;
+    text-align: center;
+}
+.client-comment i{
+    font-weight: normal;
+}
+.tour-days{
+    grid-area: days;
+    display: grid;
+    grid-template-areas: 
+                    "day1 day2"
+                    "day3 day4";
+    grid-template-columns: repeat(1fr);
+    gap: 30px 20px;
+    padding: 25px 20px 40px 20px;
+}
+.tour-days div{
+    background: #f9f6f8;
+    padding: 15px;
+}
+.tour-days h2{
+    color: #ef2ebd;
+}
+.tour-days p{
+    color: #343233;
+}
+.tour-footer{
+    grid-area: footer;
+    padding: 10px 20px 20px 20px;
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+}
