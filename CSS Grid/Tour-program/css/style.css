@@ -55,7 +55,7 @@ body{
     grid-template-areas: 
                     "day1 day2"
                     "day3 day4";
-    grid-template-columns: repeat(1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 30px 20px;
     padding: 25px 20px 40px 20px;
 }
