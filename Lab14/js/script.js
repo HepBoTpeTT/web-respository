@@ -33,20 +33,26 @@ styleButton.forEach(function(button) {
         const styleName = this.querySelector('.card-view-button span').textContent;
 
         if (activeStyleButton){
-            activeStyleButton.classList.toggle('active');
+            activeStyleButton.classList.remove('active');
         }
 
-        clickedStyleButton.classList.toggle('active');
+        clickedStyleButton.classList.add('active');
         activeStyleButton = clickedStyleButton;
 
         if (styleName == 'Плитка'){
-            styleList.classList.toggle('tile');
+            styleList.classList.add('tile');
+            styleList.classList.remove('standard');
+            styleList.classList.remove('compact');
         }
         else if (styleName == 'Список'){
-            styleList.classList.toggle('standard');
+          styleList.classList.remove('tile');
+          styleList.classList.add('standard');
+          styleList.classList.remove('compact');
         }
         else{
-            styleList.classList.toggle('compact');
+          styleList.classList.remove('tile');
+          styleList.classList.remove('standard');
+          styleList.classList.add('compact');
         }
     })
 });
