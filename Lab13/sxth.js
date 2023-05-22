@@ -4,7 +4,7 @@ let shopItemsDict = {'Компьютер МОЩЩЩЩНЫЙ':{'Процессо�
 
 function calculate_cost(computer_name){
     let price = 0;
-    let koeffs = {'Процессор':3000, 'Материнская плата':5000, 'ОЗУ':1500, 'Накопители':2000};
+    let koeffs = {'Процессор':3000, 'Видеокарта':5000, 'Материнская плата':2500, 'ОЗУ':1500, 'Накопители':2000};
     let params_list = [];
     if(computer_name in shopItemsDict){
         for (const [key_computer, value_computer] of Object.entries(shopItemsDict[computer_name])){
