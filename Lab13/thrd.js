@@ -7,9 +7,9 @@ for(i = 0; i < numbers.length; i++){
     numbers[index] = buf;
 }
 let indexToShow = prompt('Какой индекс показать?',0);
-if(numbers[9] == undefined){
+if(numbers[indexToShow] == undefined){
     console.log('Элемент не найден');
 }
 else{
-    numbers[9] == undefined;
+    console.log(numbers[indexToShow]);
 }
