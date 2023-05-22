@@ -6,5 +6,5 @@ function calculate_salary(dirty_salary){
         return dirty_salary*0.65;
     }
 }
-//let salary = prompt('Сумма для расчёта',0);
+let salary = prompt('Сумма для расчёта',0);
 console.log(calculate_salary(150000));
