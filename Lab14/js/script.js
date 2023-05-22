@@ -23,11 +23,6 @@ themeButtons.forEach(function(button) {
   });
 });
 
-/*
-This HomeWork completed by Samaratunga Nikandr
-If you see this in homework from another people -- it's plagiarism
-*/
-
 let styleButton = document.querySelectorAll('.card-view-item button');
 let styleList = document.querySelector('.cards');
 let activeStyleButton = null;
@@ -38,64 +33,20 @@ styleButton.forEach(function(button) {
         const styleName = this.querySelector('.card-view-button span').textContent;
 
         if (activeStyleButton){
-            activeStyleButton.classList.remove('active');
+            activeStyleButton.classList.toggle('active');
         }
 
-        clickedStyleButton.classList.add('active');
+        clickedStyleButton.classList.toggle('active');
         activeStyleButton = clickedStyleButton;
 
         if (styleName == 'Плитка'){
-            styleList.classList.add('tile');
+            styleList.classList.toggle('tile');
         }
         else if (styleName == 'Список'){
-            styleList.classList.add('standard');
+            styleList.classList.toggle('standard');
         }
         else{
-            styleList.classList.add('compact');
+            styleList.classList.toggle('compact');
         }
     })
 });
-
-/*    if (styleList.classList.length > 1) {
-    styleList.classList.remove(styleList.classList[element.classList.length - 1]);
-}
-
-let themeButton = document.querySelectorAll('.theme-button');
-let themeName;
-themeButton.forEach(function(button) {
-    button.addEventListener('click', function() {
-      themeName = this.querySelector('.theme-button span').textContent;
-      this.classList.toggle('active')
-    if (themeName == 'Темная'){
-        document.documentElement.setAttribute('data-theme-name', 'dark');
-    }
-    else if (themeName == 'Светлая'){
-        document.documentElement.setAttribute('data-theme-name', 'light');
-    }
-    else{
-        document.documentElement.setAttribute('data-theme-name', 'texture');
-    }
-    })
-});
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-This HomeWork completed by Samaratunga Nikandr
-If you see this in homework from another people -- it's plagiarism
-*/
