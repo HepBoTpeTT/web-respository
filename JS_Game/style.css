@@ -39,7 +39,7 @@ p{
     }
 
     100%{
-        left: calc(-60px);
+        left: -60px;
     }
 }
 
