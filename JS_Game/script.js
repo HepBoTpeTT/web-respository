@@ -9,7 +9,7 @@ let config = {
 	score : document.createElement('span'),
 	helpText : document.createElement('p'),
 
-	cloudStyle : 'width: 70px; height: 20px; background-image : url(img/cloud.png); background-size: cover; background=position: center bottom; position: absolute; left: 100px;'
+	cloudStyle : 'width: 70px; height: 20px; background-image : url(img/cloud.png); background-size: cover; background=position: center bottom; position: absolute; left: 100%;'
 };
 
 initHelpText();
