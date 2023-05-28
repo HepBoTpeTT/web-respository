@@ -4,13 +4,6 @@ p{
     color: #797979;
 }
 
-#cloud1{
-    top: 40px;
-}
-#cloud2{
-    top: 65px;
-}
-
 #game.started #cloud1{
     animation: CloudMove 5.2s infinite linear;
 }
