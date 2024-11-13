@@ -1,0 +1,424 @@
+
+/* Fonts import */
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('../fonts/proximanova_regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('../fonts/proximanova_light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/static/Nunito-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/static/Nunito-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Fonts import */
+
+/* GENERAL */
+:root{
+    --blue: #3698d9;
+    --text-color-dark: #292a2f;
+    --text-color-light: #ffffff;
+    --text-color-gray: #767676;
+    --bg-gray: #f5f5f5;
+    --bg-white: #ffffff;
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    color: var(--text-color-dark);
+    font-weight: 400;
+}
+body{
+    margin-top: 56px;
+    background-color: var(--bg-white);
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section{
+    background-color: var(--bg-white);
+}
+
+section:nth-child(2n){
+    background-color: var(--bg-gray);
+}
+/* GENERAL */
+
+/* HEAD */
+.header{
+    background: rgba(242, 242, 242, 0.5);
+    backdrop-filter: blur(10px); /* Размытие фона под маской */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    z-index: 999;
+    border-bottom: solid #e9e9e9 1px;
+}
+
+.nav-link{
+    color: var(--text-color-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mask {
+    justify-content: space-between;
+    margin: auto -15px;
+}
+/* HEAD */
+
+/* SMART BRACELET */
+.smart-bracelet{
+    padding: 10vh 0 20vh 0;
+}
+
+.headers *{
+    color: var(--text-color-dark);
+}
+.headers h1{
+    font-family: 'ProximaNova', sans-serif;
+    font-weight: 300;
+    letter-spacing: -2px;
+}
+
+.headers h2{
+    font-family: 'ProximaNova', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+}
+
+.headers h3{
+    font-family: 'ProximaNova', sans-serif;
+    color: var(--blue);
+    letter-spacing: -1px;
+    font-size: 2rem;
+}
+
+.headers h3 span{
+    color: inherit;
+    font-weight: 300;
+}
+
+.headers p{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    margin: 10% 0 0 0;
+    line-height: 20px;
+}
+
+.watch-button{
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    border-radius: 20px;
+    margin: 4% 0 0 0;
+    background-color: var(--blue);
+    border: none;
+}
+
+.watch-button > span{
+    display: inline;
+    margin: 0 10px;
+    color: var(--text-color-light);
+}
+/* SMART BRACELET */
+
+/* WHY US */
+.why-us{
+    padding: 2rem 0;
+}
+
+.why-us h2{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.ticket-list{
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.ticket h4{
+    margin-bottom: .3rem;
+}
+
+.ticket p{
+    color: var(--text-color-gray);
+    letter-spacing: -1px;
+    font-size: 1.1rem;
+}
+
+.why-us .watch-button span{
+    padding: 0 20px;
+}
+/* WHY US */
+
+/* PHYSICAL ACTIVITY */
+.physical-activity{
+    padding: 3rem 0;
+}
+.physical-activity h2{
+    text-align: center;
+}
+
+.physical-activity p{
+    color: var(--text-color-gray);
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 0;
+}
+/* PHYSICAL ACTIVITY */
+
+/* BRACELET FUNCTIONS */
+.bracelet-functions{
+    padding: 8rem 0;
+}
+
+.bracelet-functions .row{
+    gap: 8rem;
+}
+
+.function-container:nth-child(2n){
+    flex-direction: row-reverse;
+}
+
+.function-container{
+    align-items: center;
+}
+
+.function-image > img{
+    max-width: fit-content;
+    width: 100%;
+}
+
+.function-container:nth-child(1) .function-desc p{
+    padding-bottom: 5rem;
+}
+
+.function-desc p{
+    color: var(--text-color-gray);
+    font-size: 1.1rem;
+}
+/* BRACELET FUNCTIONS */
+
+/* MI FIT APP */
+.mi-fit-app{
+    padding: 3rem 0;
+}
+
+.mi-fit-app h1{
+    margin-bottom: 3rem;
+}
+.mi-fit-app p{
+    color: var(--text-color-gray);
+    font-size: 1.1rem;
+}
+.app-icon img{
+    padding-bottom: 20%;
+}
+
+.download-button-container{
+    padding-left: 30px;
+    gap: 15%;
+    margin-top: 5%;
+}
+
+.download-button-container button{
+    display: inline-block;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    background: transparent;
+    flex: none;
+    outline: none;
+}
+
+
+.phone-screens{
+    margin-top: 8rem;
+}
+.phone-body{
+    border-radius: 55px;
+    box-shadow: 0 -60px 55px 2px #a1a1a1;
+    position: absolute;
+}
+
+.screens-carousel{
+    justify-content: space-around;
+    padding: 5.55rem 0;
+}
+.screens-carousel img:not(:nth-child(3)){
+    box-shadow: 0 -10px 20px 2px #a1a1a1;
+}
+/* MI FIT APP */
+
+/* BUY BRACELET */
+.buy-bracelet{
+    padding: 5rem 0;
+}
+
+.buy-bracelet h5{
+    font-size: 2.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.buy-bracelet-details{
+    gap: 1rem;
+}
+
+.buy-bracelet-desc-container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: fit-content;
+    padding-left: 30px;
+}
+
+.buy-bracelet-desc-container::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 5px;
+    height: 90%;
+    background-color: var(--blue);
+    border-radius: 6px;
+}
+
+.buy-bracelet-desc-container p{
+    font-size: 1.1rem;
+    color: var(--text-color-gray);
+    margin: 0;
+}
+
+.buy-bracelet-desc-container h3{
+    color: var(--blue);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.set-of-delivery p{
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.set-of-delivery ul{
+    margin: 0;
+    padding: 0 0 0 15px;
+}
+.set-of-delivery ul::marker, .set-of-delivery ul li{
+    color: var(--text-color-gray);
+}
+
+.order-now p{
+    font-size: 1.75rem;
+    margin: 0;
+}
+
+.order-now span{
+    color: var(--text-color-gray);
+    font-size: 1.1rem;
+}
+/* BUY BRACELET */
+
+
+/* FEEDBACKS */
+/* FEEDBACKS */
+
+
+/* FOOTER */
+footer{
+    background-color: #000000;
+    padding: 3rem 0 8rem 0;
+}
+
+.do-order{
+    color: var(--text-color-light);
+    font-weight: 400;
+    font-size: 2.3rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+}
+
+
+
+.do-order span:not(.text-separator){
+    color: inherit;
+    font-size: 1.15rem;
+    font-weight: 300;
+    display: inline-block;
+    height: fit-content;
+}
+
+.text-separator{
+    display: block;
+    width: 2px;
+    height: calc(42px * 0.7);
+    /* position: absolute; */
+    background: var(--blue);
+}
+
+.bonus{
+    color: var(--text-color-light);
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+footer input[type="text"]{
+    color: var(--text-color-gray);
+    padding: 10px calc(30% + 5px + 15px) 10px 30px;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    width: 100%;
+}
+footer input[type="text"]::placeholder{
+    color: var(--text-color-gray);
+}
+
+footer input[type="submit"]{
+    color: var(--text-color-light);
+    background: var(--blue);
+    border: none;
+    outline: none;
+    padding: 10px 0 10px 15px;
+    font-size: 1.1rem;
+    position: absolute;
+    width: 30%;
+    left: calc(70% - 15px);
+    border-radius: 0 20px 20px 0;
+}
+/* FOOTER */
