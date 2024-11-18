@@ -69,6 +69,38 @@
             </div>
         </section>
         <section class="why-us">
+            <div class="w-100 icons-addon-wrapper">
+                <div class="container d-none d-md-block d-lg-block">
+                    <div class="row">
+                        <ul class="icons-addon d-flex w-100">
+                            <li>
+                                <div class="icon-wrapper">
+                                    <img src="img/1.png" class="img-fluid" alt="Health sleeping">
+                                </div>
+                                <p>Здоровый сон</p>
+                            </li>
+                            <li>
+                                <div class="icon-wrapper">
+                                    <img src="img/2.png" class="img-fluid" alt="Activity control">
+                                </div>
+                                <p>Контроль активности</p>
+                            </li>
+                            <li>
+                                <div class="icon-wrapper">
+                                    <img src="img/3.png" class="img-fluid" alt="Calorie consumption">
+                                </div>
+                                <p>Расход калорий</p>
+                            </li>
+                            <li>
+                                <div class="icon-wrapper">
+                                    <img src="img/4.png" class="img-fluid" alt="Notifications">
+                                </div>
+                                <p>Уведомления о вызовах</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="container">
                 <div class="row">
                     <div class="col-12"><h2>Почему Mi Band</h2></div>
@@ -158,7 +190,7 @@
             <div class="container">
                 <div class="row">
                     <h1 class="col-12 text-center">Приложение Mi Fit</h2>
-                    <div class="col-md-2 offset-md-3 app-icon d-flex align-items-center">
+                    <div class="col-md-2 col-lg-3 col-xl-2 offset-md-3 offset-lg-2 offset-xl-3 app-icon d-flex align-items-center">
                         <img src="img/7.png" alt="App icon"/>
                     </div>
                     <div class="col-md-7 app-description">
@@ -177,13 +209,19 @@
             </div>
             <div class="container-fluid phone-screens">
                 <div class="row justify-content-center">
-                    <img class="phone-body img-fluid" src="img/12.png" alt="phone body"/>
-                    <div class="col-12 screens-carousel d-flex flex-nowrap">
-                        <img src="img/10.png" class="img-fluid"/>
-                        <img src="img/11.png" class="img-fluid"/>
-                        <img src="img/13.png" class="img-fluid"/>
-                        <img src="img/14.png" class="img-fluid"/>
-                        <img src="img/151.png" class="img-fluid"/>
+                    <div class="screens-carousel-container d-flex flex-nowrap">
+                        <div class="col-12 screens-carousel d-flex flex-nowrap">
+                            <img src="img/10.png" class="img-fluid"/>
+                            <img src="img/11.png" class="img-fluid"/>
+                            <img src="img/13.png" class="img-fluid active"/>
+                            <img src="img/14.png" class="img-fluid"/>
+                            <img src="img/151.png" class="img-fluid"/>
+                            <img src="img/10.png" class="img-fluid d-none"/>
+                            <img src="img/11.png" class="img-fluid d-none"/>
+                            <img src="img/13.png" class="img-fluid d-none"/>
+                            <img src="img/14.png" class="img-fluid d-none"/>
+                            <img src="img/151.png" class="img-fluid d-none"/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -194,7 +232,7 @@
                     <h5 class="col-12 text-center">Вы можете приобрести браслет</h5>
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="col-md-8 d-flex flex-wrap">
+                            <div class="col-md-8 d-flex flex-wrap justify-content-center align-items-center">
                                 <img src="img/15.png" alt="Bracelet twins photo 2" class="img-fluid"/>
                             </div>
                             <div class="col-md-4 buy-bracelet-details d-flex flex-wrap">
@@ -341,7 +379,7 @@
 
                         <p class="bonus text-center">И вы получите браслет и два сменных ремешка разного цвета в подарок</p>
                     </div>
-                    <form class="col-md-6 offset-md-3 mt-5" id="oreder-form">
+                    <form class="col-md-6 offset-md-3 mt-3 mt-lg-4 mt-xl-5" id="oreder-form">
                         <input type="text" pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$" required title="Формат: +7 (999) 999-99-99" placeholder="Оставьте ваш телефон" class="order-input color-root-gray">
                         <input type="submit" value="Отправить">
                     </form>
@@ -368,6 +406,39 @@
                     targetElement.scrollIntoView({ behavior: 'smooth' });
                 });
             });
+
+            const phoneScreensContainer = document.querySelector('.screens-carousel-container');
+                  phoneScreensContainer.style = `padding: ${phoneScreensContainer.clientHeight * 0.23448275}px 0 ${phoneScreensContainer.clientHeight * 0.10919540}px 0`;
+
+            window.addEventListener('resize', () => {phoneScreensContainer.style = `padding: ${phoneScreensContainer.clientHeight * 0.23448275}px 0 ${phoneScreensContainer.clientHeight * 0.10919540}px 0`});
+        
+            // const slider = document.querySelector('.screens-carousel');
+            // const slidesList = Array.from(document.querySelectorAll('.screens-carousel img'));
+            // console.log(slidesList.length);
+            // function screensAutoSlide(){
+            //     let translateValue = 0;
+            //     let activeSlide = slidesList.find(element => element.classList.contains('active'));
+
+            //     function slide(){
+            //         let nextSlide = slidesList[slidesList.indexOf(activeSlide) + 1];
+            //         if (nextSlide !== null){
+            //             translateValue += slider.scrollWidth / slidesList.length;
+            //             nextSlide.classList.toggle('active');
+            //             activeSlide.classList.toggle('active');
+            //         }
+            //         else{
+            //             nextSlide = slidesList[0];
+            //             translateValue = 0;
+            //             activeSlide.classList.toggle('active');
+            //             nextSlide.classList.toggle('active')
+            //         }
+            //         slider.style.transform = `translateX(-${translateValue}px)`;
+
+                    
+            //     }
+            //     setInterval(slide, 1000)
+            // }
+            // screensAutoSlide()
         </script>
     </body>
 </html>

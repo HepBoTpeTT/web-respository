@@ -44,9 +44,12 @@
     color: var(--text-color-dark);
     font-weight: 400;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin-top: 56px;
-    background-color: var(--bg-white);
+    background-color: var(--bg-gray);
 }
 p{
     font-size: 1.1rem;
@@ -102,7 +105,7 @@ section:nth-child(2n){
 
 /* SMART BRACELET */
 .smart-bracelet{
-    padding: 10vh 0 20vh 0;
+    padding: 5rem 0 20rem 0;
 }
 
 .headers *{
@@ -163,6 +166,47 @@ section:nth-child(2n){
 /* WHY US */
 .why-us{
     padding: 2rem 0;
+    position: relative;
+}
+
+.icons-addon-wrapper{
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50% 50% 0 0;
+    top: -113px;
+}
+
+.icons-addon{
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    justify-content: space-around;
+}
+
+.icons-addon li{
+    --top-affix: -33%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    position: relative;
+    font-weight: 300;
+    top: var(--top-affix);
+}
+
+.icons-addon li:nth-child(1), .icons-addon li:nth-child(4){
+    top: calc( var(--top-affix) * 0.75 );
+}
+
+.icons-addon li .icon-wrapper{
+    background: #ffffff;
+    box-shadow: 0 0 20px -10px #292a2f;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    padding: 1.5rem;
 }
 
 .why-us h2{
@@ -266,32 +310,26 @@ section:nth-child(2n){
     outline: none;
 }
 
-
 .phone-screens{
-    --phone-body-height: 100%;
-    --screen-height: calc(var(--phone-body-height) * .7543);
     margin-top: 8rem;
 }
-.phone-body{
-    height: var(--phone-body-height);
-    border-radius: 55px;
-    -webkit-box-shadow: 0 -60px 55px 2px #a1a1a1;
-            box-shadow: 0 -60px 55px 2px #a1a1a1;
-    position: relative;
+.screens-carousel-container{
+    background-image: url(../img/12.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    max-height: 870px;
+    height: 100vh;
 }
-
 .screens-carousel{
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+        justify-content: space-evenly;
+    height: 100%;
     gap: 2.5rem;
-    padding: 5.55rem 0;
-    overflow-x: hidden;
-    position: absolute;
+    transition: all .3s;
 }
-.screens-carousel img{
-    height: var(--screen-height);
-}
-.screens-carousel img:not(:nth-child(3)){
+.screens-carousel img:not(.active){
     -webkit-box-shadow: 0 -10px 20px 2px #a1a1a1;
             box-shadow: 0 -10px 20px 2px #a1a1a1;
 }
@@ -598,3 +636,95 @@ footer input[type="submit"]{
     border-radius: 0 20px 20px 0;
 }
 /* FOOTER */
+
+
+
+/* MEDIA REQUESTS */
+/* xl */
+@media (min-width: 1200px) { }
+
+/* lg */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    p{
+        font-size: 1rem;
+    }
+
+    .smart-bracelet{
+        padding-bottom: 15rem;
+    }
+    .headers h1, .headers h2{
+        font-size: 2rem;
+        margin-bottom: 0.2rem;
+    }
+    .headers h3{
+        font-size: 1.75rem;
+    }
+    .headers p{
+        margin: 2rem 0 0 0;
+        font-size: 0.9rem;
+    }
+
+    .why-us h2{
+        font-size: 2.5rem;
+        margin: 2rem 0;
+    }
+    .ticket h4{
+        font-size: 1.25rem;
+    }
+    .ticket p{
+        margin-bottom: .75rem;
+    }
+    .watch-button{
+        margin-top: 1rem;
+    }
+
+    .bracelet-functions{
+        padding: 5rem 0;
+    }
+    .function-list{
+        gap: 4rem;
+    }
+
+    .phone-screens{
+        margin-top: 2rem;
+    }
+    .screens-carousel-container{
+        height: 80vh;
+    }
+
+    .buy-bracelet{
+        padding: 3rem 0;
+    }
+    .buy-bracelet h5{
+        font-size: 2rem;
+        padding-bottom: 2.75rem;
+    }
+    .buy-bracelet-desc-container h1{
+        font-size: 2rem;
+    }
+    .buy-bracelet-desc-container h3{
+        font-size: 1.75rem;
+    }
+    .order-now p, .set-of-delivery p{
+        font-size: 1.4rem;
+    }
+    .order-now span{
+        font-size: 0.9rem;
+    }
+
+    .carousel-control-prev{
+        justify-content: flex-start;
+    }
+    .carousel-control-next{
+        justify-content: flex-end;
+    }
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 991.98px) { }
+
+/* sm */
+@media (min-width: 576px) and (max-width: 767.98px) { }
+
+/* xs */
+@media (max-width: 575.98px) { }
