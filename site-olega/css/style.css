@@ -51,7 +51,7 @@ body{
     margin-top: 56px;
     background-color: var(--bg-gray);
 }
-p{
+p, li{
     font-size: 1.1rem;
 }
 
@@ -165,7 +165,7 @@ section:nth-child(2n){
 
 /* WHY US */
 .why-us{
-    padding: 2rem 0;
+    padding: 2rem 0 5rem 0;
     position: relative;
 }
 
@@ -180,11 +180,11 @@ section:nth-child(2n){
     padding: 0;
     list-style: none;
     margin: 0;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .icons-addon li{
-    --top-affix: -33%;
+    --top-affix: -38%;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -195,6 +195,10 @@ section:nth-child(2n){
     position: relative;
     font-weight: 300;
     top: var(--top-affix);
+}
+
+.icons-addon li p{
+    margin: 0;
 }
 
 .icons-addon li:nth-child(1), .icons-addon li:nth-child(4){
@@ -310,8 +314,17 @@ section:nth-child(2n){
     outline: none;
 }
 
+
+@keyframes screensanim{
+    0% {
+        transform: translateX(903.5px);
+    }
+    100% {
+        transform: translateX(-903.5px);
+    }
+}
 .phone-screens{
-    margin-top: 8rem;
+    margin-top: 6rem;
 }
 .screens-carousel-container{
     background-image: url(../img/12.png);
@@ -319,16 +332,17 @@ section:nth-child(2n){
     background-position: center;
     background-repeat: no-repeat;
     overflow-x: hidden;
-    max-height: 870px;
-    height: 100vh;
+    height: 870px;
 }
 .screens-carousel{
     -ms-flex-pack: distribute;
         justify-content: space-evenly;
-    height: 100%;
     gap: 2.5rem;
     transition: all .3s;
+    /* transform: translateX(903px); */
+    animation: screensanim 20s linear 0s infinite;
 }
+
 .screens-carousel img:not(.active){
     -webkit-box-shadow: 0 -10px 20px 2px #a1a1a1;
             box-shadow: 0 -10px 20px 2px #a1a1a1;
@@ -645,7 +659,7 @@ footer input[type="submit"]{
 
 /* lg */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-    p{
+    p, li{
         font-size: 1rem;
     }
 
@@ -664,6 +678,12 @@ footer input[type="submit"]{
         font-size: 0.9rem;
     }
 
+    .icons-addon li{
+        gap: 0.9rem;
+    }
+    .icons-addon li .icon-wrapper{
+        padding: 1.25rem;
+    }
     .why-us h2{
         font-size: 2.5rem;
         margin: 2rem 0;
@@ -685,11 +705,22 @@ footer input[type="submit"]{
         gap: 4rem;
     }
 
+    @keyframes screensanim-lg{
+        0% {
+            transform: translateX(743px);
+        }
+        100% {
+            transform: translateX(-743px);
+        }
+    }
     .phone-screens{
         margin-top: 2rem;
     }
     .screens-carousel-container{
-        height: 80vh;
+        height: 696px;
+    }
+    .screens-carousel{
+        animation-name: screensanim-lg;
     }
 
     .buy-bracelet{
@@ -718,10 +749,118 @@ footer input[type="submit"]{
     .carousel-control-next{
         justify-content: flex-end;
     }
+
+    footer{
+        padding-bottom: 5rem;
+    }
 }
 
 /* md */
-@media (min-width: 768px) and (max-width: 991.98px) { }
+@media (min-width: 768px) and (max-width: 991.98px) {
+    p, li{
+        font-size: .85rem;
+    }
+
+    .smart-bracelet{
+        padding-bottom: 15rem;
+    }
+    .headers h1, .headers h2{
+        font-size: 1.75rem;
+        margin-bottom: .1rem;
+    }
+    .headers h3{
+        font-size: 1.5rem;
+    }
+    .headers p{
+        margin: 1.5rem 0 0 0;
+        font-size: .75rem;
+    }
+
+    .icons-addon li{
+        gap: 0.8rem;
+    }
+    .icons-addon li .icon-wrapper{
+        padding: 1rem;
+    }
+    .why-us{
+        padding-top: 1rem;
+    }
+    .why-us h2{
+        font-size: 2rem;
+        margin: 1.5rem 0;
+    }
+    .ticket h4{
+        font-size: 1rem;
+    }
+    .ticket p{
+        margin-bottom: .5rem;
+        font-size: 0.9rem;
+    }
+    .watch-button{
+        margin-top: .75rem;
+    }
+
+    .bracelet-functions{
+        padding: 3rem 0;
+    }
+    .function-list{
+        gap: 3rem;
+    }
+
+    @keyframes screensanim-md{
+        0% {
+            transform: translateX(582px);
+        }
+        100% {
+            transform: translateX(-582px);
+        }
+    }
+    .phone-screens{
+        margin-top: 1.5rem;
+    }
+    .screens-carousel-container{
+        height: 522px;
+    }
+    .screens-carousel{
+        animation-name: screensanim-md;
+    }
+
+    .buy-bracelet{
+        padding: 2.5rem 0;
+    }
+    .buy-bracelet h5{
+        font-size: 1.75rem;
+        padding-bottom: 2.5rem;
+    }
+    .buy-bracelet-desc-container h1{
+        font-size: 1.5rem;
+    }
+    .buy-bracelet-desc-container h3{
+        font-size: 1.25rem;
+    }
+    .order-now p, .set-of-delivery p{
+        font-size: 1.2rem;
+    }
+    .order-now span{
+        font-size: 0.8rem;
+    }
+
+    .user-comma{
+        font-size: .8rem;
+        line-height: inherit;
+    }
+
+    .carousel-control-prev{
+        justify-content: flex-start;
+    }
+    .carousel-control-next{
+        justify-content: flex-end;
+    }
+
+    footer{
+        padding-bottom: 4rem;
+    }
+}
 
 /* sm */
 @media (min-width: 576px) and (max-width: 767.98px) { }
