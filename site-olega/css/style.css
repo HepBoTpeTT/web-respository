@@ -56,11 +56,11 @@ p, li{
 }
 
 section{
-    background-color: var(--bg-white);
+    background-color: var(--bg-gray);
 }
 
 section:nth-child(2n){
-    background-color: var(--bg-gray);
+    background-color: var(--bg-white);
 }
 .color-root-gray{
     color: var(--text-color-gray);
@@ -69,7 +69,7 @@ section:nth-child(2n){
 /* GENERAL */
 
 /* HEAD */
-.header{
+header{
     background: rgba(242, 242, 242, 0.5);
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px); /* Размытие фона под маской */
@@ -177,14 +177,12 @@ section:nth-child(2n){
 }
 
 .icons-addon{
-    padding: 0;
-    list-style: none;
     margin: 0;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .icons-addon li{
-    --top-affix: -38%;
+    --top-affix: -50%;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -199,6 +197,10 @@ section:nth-child(2n){
 
 .icons-addon li p{
     margin: 0;
+    position: absolute;
+    bottom: -40px;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .icons-addon li:nth-child(1), .icons-addon li:nth-child(4){
@@ -370,9 +372,9 @@ section:nth-child(2n){
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: flex-start;
+        -ms-flex-align: flex-start;
+            align-items: flex-start;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -416,10 +418,6 @@ section:nth-child(2n){
 .order-now p{
     font-size: 1.75rem;
     margin: 0;
-}
-
-.order-now span{
-    font-size: 1.1rem;
 }
 /* BUY BRACELET */
 
@@ -557,7 +555,6 @@ section:nth-child(2n){
 }
 
 .user-comma{
-    font-size: 1rem;
     line-height: 1.25rem;
 }
 
@@ -637,18 +634,21 @@ footer input[type="text"]::placeholder{
     color: var(--text-color-gray);
 }
 
-footer input[type="submit"]{
-    color: var(--text-color-light);
+footer button[type="submit"]{
     background: var(--blue);
     border: none;
     outline: none;
-    padding: 10px 0 10px 15px;
+    padding: 10px 0 10px 0;
     font-size: 1.1rem;
     position: absolute;
     width: 30%;
     left: calc(70% - 15px);
     border-radius: 0 20px 20px 0;
 }
+footer button[type="submit"] span{
+    color: var(--text-color-light);
+}
+
 /* FOOTER */
 
 
@@ -659,7 +659,7 @@ footer input[type="submit"]{
 
 /* lg */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-    p, li{
+    p, li, span{
         font-size: 1rem;
     }
 
@@ -678,6 +678,9 @@ footer input[type="submit"]{
         font-size: 0.9rem;
     }
 
+    .icons-addon-wrapper{
+        top: -106px;
+    }
     .icons-addon li{
         gap: 0.9rem;
     }
@@ -739,9 +742,6 @@ footer input[type="submit"]{
     .order-now p, .set-of-delivery p{
         font-size: 1.4rem;
     }
-    .order-now span{
-        font-size: 0.9rem;
-    }
 
     .carousel-control-prev{
         justify-content: flex-start;
@@ -757,7 +757,7 @@ footer input[type="submit"]{
 
 /* md */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    p, li{
+    p, li, span{
         font-size: .85rem;
     }
 
@@ -776,6 +776,9 @@ footer input[type="submit"]{
         font-size: .75rem;
     }
 
+    .icons-addon-wrapper{
+        top: -98px;
+    }
     .icons-addon li{
         gap: 0.8rem;
     }
@@ -841,12 +844,8 @@ footer input[type="submit"]{
     .order-now p, .set-of-delivery p{
         font-size: 1.2rem;
     }
-    .order-now span{
-        font-size: 0.8rem;
-    }
 
     .user-comma{
-        font-size: .8rem;
         line-height: inherit;
     }
 
@@ -863,7 +862,276 @@ footer input[type="submit"]{
 }
 
 /* sm */
-@media (min-width: 576px) and (max-width: 767.98px) { }
+@media (min-width: 576px) and (max-width: 767.98px) {
+    p, li, span{
+        font-size: .9rem;
+    }
+
+    .smart-bracelet{
+        padding-bottom: 15rem;
+    }
+    .headers h1, .headers h2{
+        font-size: 1.75rem;
+        margin-bottom: .1rem;
+    }
+    .headers h3{
+        font-size: 1.5rem;
+    }
+    .headers p{
+        margin: 1.5rem 0 0 0;
+        font-size: .75rem;
+    }
+
+    .icons-addon-wrapper{
+        top: -98px;
+    }
+    .icons-addon li{
+        gap: 0.8rem;
+    }
+    .icons-addon li .icon-wrapper{
+        padding: 1rem;
+    }
+    .why-us{
+        padding-top: 1rem;
+    }
+    .why-us h2{
+        font-size: 2rem;
+        margin: 1.5rem 0;
+    }
+    .ticket h4{
+        font-size: 1.2rem;
+    }
+    .ticket p{
+        margin-bottom: .5rem;
+        font-size: 0.9rem;
+    }
+    .watch-button{
+        margin-top: .75rem;
+    }
+
+    .bracelet-functions{
+        padding: 3rem 0;
+    }
+    .function-list{
+        gap: 3rem;
+    }
+    .function-list .media:nth-child(1) .media-body {
+        padding-bottom: 0;
+    }
+
+    .download-button-container{
+        padding-left: 0;
+        gap: 0;
+    }
+    .download-button-container button{
+        margin: 0 auto;
+    }
+    @keyframes screensanim-md{
+        0% {
+            transform: translateX(582px);
+        }
+        100% {
+            transform: translateX(-582px);
+        }
+    }
+    .phone-screens{
+        margin-top: 1.5rem;
+    }
+    .screens-carousel-container{
+        height: 522px;
+    }
+    .screens-carousel{
+        animation-name: screensanim-md;
+    }
+
+    .buy-bracelet{
+        padding: 2.5rem 0;
+    }
+    .buy-bracelet h5{
+        font-size: 1.75rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .user-comma{
+        line-height: inherit;
+    }
+
+    .carousel-control-prev{
+        justify-content: flex-start;
+    }
+    .carousel-control-next{
+        justify-content: flex-end;
+    }
+
+    footer{
+        padding-bottom: 4rem;
+    }
+
+    .icons-addon-wrapper{
+        top: -91px;
+    }
+    .icons-addon{
+        gap: 2rem;
+    }
+    .icons-addon li{
+        --top-affix: -50%
+    }
+    .icons-addon li:nth-child(1), .icons-addon li:nth-child(4){
+        top: calc( var(--top-affix) * 0.5 );
+    }
+    .icons-addon li .icon-wrapper{
+        padding: .8rem;
+    }
+    .icons-addon li p{
+        font-size: .9rem;
+    }
+}
 
 /* xs */
-@media (max-width: 575.98px) { }
+@media (max-width: 575.98px) {
+    p, li, span{
+        font-size: 0.9rem
+    }
+    .smart-bracelet{
+        padding: 1rem 0 2rem 0;
+    }
+    .headers h1, .headers h2{
+        font-size: 2rem;
+    }
+    .headers h3, .headers h3 span{
+        font-size: 1.5rem;
+    }
+    .headers p{
+        margin-top: 2rem;
+    }
+
+    .why-us{
+        padding: 1rem 0 2rem 0;
+    }
+    .why-us img{
+        max-height: 350px;
+    }
+    .why-us h2{
+        font-size: 2rem;
+        margin: 1.5rem 0;
+    }
+    .ticket h4{
+        font-size: 1.25rem;
+    }
+    .ticket p{
+        margin-bottom: .5rem;
+        font-size: 1rem;
+    }
+    .watch-button{
+        margin-top: .75rem;
+    }
+
+    .physical-activity{
+        padding: 2rem 0;
+    }
+    .physical-activity h2{
+        font-size: 1.5rem;
+    }
+    .physical-activity p{
+        font-size: 1rem;
+    }
+
+    .media{
+        gap: 1rem;
+    }
+
+    .bracelet-functions{
+        padding: 4rem 0 2rem;
+    }
+    .bracelet-functions h2{
+        font-size: 1.5rem;
+    }
+    .bracelet-functions p{
+        font-size: 1rem;
+    }
+    .function-list {
+        gap: 2rem;
+    }
+    .function-list .media:nth-child(1) .media-body {
+        padding-bottom: 0;
+    }
+
+    .mi-fit-app{
+        padding: 2rem 0;
+    }
+    .mi-fit-app h1{
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    .app-icon img{
+        padding-bottom: 2rem;
+    }
+    .download-button-container{
+        padding: 0;
+        gap: 1rem;
+    }
+    .download-button-container button{
+        margin: 0 auto;
+    }
+
+    @keyframes screensanim-xs{
+        0% {
+            transform: translateX(432.5px);
+        }
+        100% {
+            transform: translateX(-432.5px);
+        }
+    }
+    .phone-screens{
+        margin-top: 2rem;
+    }
+    .screens-carousel-container{
+        height: 360px;
+    }
+    .screens-carousel{
+        animation-name: screensanim-xs;
+    }
+
+    .buy-bracelet{
+        padding: 2rem;
+    }
+    .buy-bracelet h5{
+        font-size: 1.9rem;
+        padding-bottom: 2.5rem;
+    }
+    .buy-bracelet-desc-container h1{
+        font-size: 1.5rem;
+    }
+    .buy-bracelet-desc-container h3{
+        font-size: 1.2rem;
+    }
+    .set-of-delivery p, .order-now p{
+        font-size: 1.2rem;
+    }
+
+    footer{
+        padding: 3rem 0 2rem 0;
+    }
+    .do-order{
+        font-size: 1.4rem;
+        gap: 10px;
+    }
+    .do-order span:not(.text-separator){
+        font-size: 1rem;
+    }
+    footer input[type="text"], footer button[type="submit"]{
+        height: 45px;
+    }
+    footer input[type="text"]{
+        padding: 10px calc(20% + 20px) 10px 20px;
+    }
+    footer button[type="submit"]{
+        /* padding: 8px 0 2px 0; */
+        display: flex;
+        top: 0;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        left: calc(80% - 14.5px);
+    }
+}
