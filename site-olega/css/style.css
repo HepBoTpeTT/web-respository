@@ -345,6 +345,11 @@ header{
     animation: screensanim 20s linear 0s infinite;
 }
 
+.screens-carousel img{
+    height: 320.683px;
+    width: 571px;
+}
+
 .screens-carousel img:not(.active){
     -webkit-box-shadow: 0 -10px 20px 2px #a1a1a1;
             box-shadow: 0 -10px 20px 2px #a1a1a1;
@@ -725,6 +730,10 @@ footer button[type="submit"] span{
     .screens-carousel{
         animation-name: screensanim-lg;
     }
+    .screens-carousel img{
+        height: 256.55px;
+        width: 456.8px;
+    }
 
     .buy-bracelet{
         padding: 3rem 0;
@@ -826,6 +835,10 @@ footer button[type="submit"] span{
     }
     .screens-carousel{
         animation-name: screensanim-md;
+    }
+    .screens-carousel img{
+        height: 193.017px;
+        width: 342.6px;
     }
 
     .buy-bracelet{
@@ -942,6 +955,10 @@ footer button[type="submit"] span{
     }
     .screens-carousel{
         animation-name: screensanim-md;
+    }
+    .screens-carousel img{
+        height: 193.017px;
+        width: 342.6px;
     }
 
     .buy-bracelet{
@@ -1090,6 +1107,10 @@ footer button[type="submit"] span{
     }
     .screens-carousel{
         animation-name: screensanim-xs;
+    }
+    .screens-carousel img{
+        height: 133.1px;
+        width: 236.267px;
     }
 
     .buy-bracelet{
