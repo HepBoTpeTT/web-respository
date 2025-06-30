@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <link href="/static/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&display=swap" rel="stylesheet"> 
+        <script src="https://kit.fontawesome.com/e6d89ead54.js"></script>
+        <meta charset="utf-8">
+        <title>Красный Кот | Натяжные потолки</title> 
+    </head>
+    <body id="body">
+        <div class="gallery_show" id="gal_show">
+            <button class="del2" id="del2" type="button">+</button>
+            <a class="controller to-left" id="left"><i class="fas fa-chevron-left"></i></a>
+            <div id="image_container" class="col-lg-12 col-md-12 col-xs-12,col-sm-12 flex"></div>
+            <a class="controller to-right" id="right"><i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="all" id="all">
+            <div class="red-contur" id="form-on-click">
+                <form class="form-on-click">
+                    <button class="del" id="del" type="button">+</button>
+                    <p class="form-text">Заполните эту форму, и наш специалист свяжется с вами в ближайшее время.</p>
+                    <input type='text' name="contact_phone" class='form-input' required placeholder='Номер телефона'> 
+                    <input type='text' name="name" class='form-input' required placeholder='Ваше имя'>
+                    <textarea class="form-input" name="comment" placeholder="Уточнения к заказу" style="resize: none;"></textarea>
+                    <div class="wrap">
+                        <button type="submit" class='form-input-submit'>связаться</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <section class="header" id="glavnaya">
+            <div class="container">
+                <div class="row">
+                        <div class="logo-image-container col-md-2 col-lg-2 hidden-xs col-sm-2">
+                            <img src="/static/images/logo.png" class="logo-image">
+                        </div>
+                        <div class="menu-conainer col-md-10 col-lg-10 col-sm-10 hidden-xs">
+                            <div class="menu-container-top col-lg-12 col-md-12">
+                                <div class="col-md-3 col-lg-3 phone-container">
+                                    <p class="phone"><i class="fas fa-phone-volume rotate"></i> 8 (900) 124-07-00</p>
+                                </div>
+                                <div class="col-md-6 col-lg-6 mail-container">
+                                    <p class="mail"><i class="far fa-envelope"></i> example@exmaple.com</p>
+                                </div>
+                                <div class="col-md-3 col-lg-3 position-container">
+                                    <p class="position-marker"><i class="fas fa-map-marker-alt special-height"></i></p>
+                                    <p class="position-text">Шахты,Шевченко 123<br>Дом быта, 2 этаж</p>
+                                </div>
+                            </div>
+                            <div class="between-line col-md-12 col-lg-12">
+                                <div class="hr-header col-md-12 col-lg-12"></div>
+                            </div>
+                            <div class="menu-container-bottom col-lg-12 col-md-12">
+                                <div class="menu-item-container" id="menu">
+                                    <div class="menu-item">
+                                        <a href="#glavnaya" class="scrollto active">главная</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#o_kompanii" class="scrollto">о компании</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#uslugi" class="scrollto">услуги</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#preim" class="scrollto">преимущества</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#portfolio" class="scrollto">портфолио</a>
+                                    </div>
+                                    <div class="menu-item">
+                                        <a href="#contacti" class="scrollto">контакты</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                       
+                        <nav class="navbar navbar-default hidden-lg hidden-md hidden-sm">
+                            <div class="container-fluid">
+                              <!-- Заголовок -->
+                              <div class="navbar-header">
+                                <!-- Кнопка «Гамбургер» отображается только в мобильном виде (предназначена для открытия основного содержимого Navbar) -->
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                        <!-- Бренд или название сайта (отображается в левой части меню) -->
+                                        <div class="logo-image-container col-md-2 col-lg-2">
+                                            <img src="/static/images/logo.png" class="logo-image xs-sm">
+                                        </div>
+                              </div>
+                              <!-- Основная часть меню (может содержать ссылки, формы и другие элементы) -->
+                              <div class="collapse navbar-collapse" id="navbar-main">
+                                <ul class="nav navbar-nav">
+                                    <li class="active">
+                                        <a href="#glavnaya" class="scrollto"><p class="menu-item-name active" id="a1">главная</p></a>
+                                    </li>
+                                    <li>
+                                        <a href="#o_kompanii" class="scrollto"><p class="menu-item-name" id="a2">о компании</p></a>
+                                    </li>
+                                    <li>
+                                        <a href="#uslugi" class="scrollto"><p class="menu-item-name" id="a3">услуги</p></a>
+                                    </li>
+                                    <li>
+                                        <a href="#preim" class="scrollto"><p class="menu-item-name" id="a4">преимущества</p></a>
+                                    </li>
+                                    <li>
+                                        <a href="#portfolio" class="scrollto"><p class="menu-item-name" id="a5">портфолио</p></a>
+                                    </li>
+                                    <li>
+                                        <a href="#contacti" class="scrollto"><p class="menu-item-name" id="a6">контакты</p></a>
+                                    </li>
+                                </ul>
+                                
+                              </div>
+                            </div>
+                        </nav>
+                        <div class="main-head-content col-md-12 col-lg-12">
+                            <div class="slogan col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                <div class="col-md-11 col-lg-11 col-md-offset-1 col-lg-offset-1">
+                                    <h2>студия натяжных <span>потолков</span></h2>
+                                    <h1>делаем <span>качественно</span></h1>
+                                    <p class="slogan-small">Профессиональные услуги по установке натяжных потолков<br>любой сложности.</p>
+                                    <button class="button-slogan" type="button" id="slogan-button">связаться</button>
+                                </div>
+                            </div>
+                            <div class="calculator-container col-lg-6 col-md-6 hidden-sm hidden-xs">
+                                <div class="calculator-body">
+                                    <div class="calculator-text">
+                                        <div class="calculator-name">
+                                            <h3>калькулятор</h3>
+                                        </div>
+                                        <div class="calculator-udername">
+                                            <p class="calculator-udername-text">Наш специалист свяжется с Вами<br> и договорится об удобном<br> времени замера и консультации.</p>
+                                        </div>
+                                    </div>
+                                    <div class="calculator-inputs">
+                                        <form>
+                                            <input type="number" name="area" placeholder="Площадь потолка" required class="calculator-input">
+                                            <input type="text" name="name" placeholder="Ваше имя" required class="calculator-input">
+                                            <input type="text" name="contact_phone" required placeholder="Номер телефона" class="calculator-input">
+                                            <button type="submit" class="calculator-button">рассчитать стоимость</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calculator-container hidden-lg hidden-md col-sm-12 col-xs-12">
+                            <div class="calculator-body">
+                                <div class="calculator-text">
+                                    <div class="calculator-name">
+                                        <h3>калькулятор</h3>
+                                    </div>
+                                    <div class="calculator-udername">
+                                        <p class="calculator-udername-text">Наш специалист свяжется с Вами<br> и договорится об удобном<br> времени замера и консультации.</p>
+                                    </div>
+                                </div>
+                                <div class="calculator-inputs">
+                                    <form>
+                                        <input type="number" name="area" placeholder="Площадь потолка" required class="calculator-input">
+                                        <input type="text" name="name" placeholder="Ваше имя" required class="calculator-input">
+                                        <input type="text" name="contact_phone" placeholder="Номер телефона" required class="calculator-input">
+                                        <button type="submit" class="calculator-button">рассчитать стоимость</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="secret_block hidden-sm hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="secret_block_content col-lg-12 col-md-12">
+                        <div class="books_img_container col-lg-5 col-md-5">
+                            <img class="books_img" src="/static/images/books.png">
+                        </div>
+                        <div class="secret_text_container col-lg-7 col-md-7">
+                            <div class="secret_text_item_container col-md-12 col-lg-12">
+                                <h3 class="secret_text_item">Скачайте 10 советов: "Как правильно выбрать натяжной потолок"</h3>
+                            </div>
+                            <div class="secret_link_item_container col-md-12 col-lg-12">
+                                <a class="secret_link_item" onclick="alert('Тут пока ничего нет')">узнать 10 советов</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+        </section>
+        <section class="grey">
+            <div class="container">
+                <div class="row">
+                    <div class="grey-content">
+                        <div class="picture-container col-lg-3 col-md-3 hidden-sm hidden-xs">
+                            <img src="/static/images/picture1.png" class="picture">
+                        </div>
+                        <div class="flex col-md-9 col-lg-9 col-sm-12 col-xs-12">
+                            <div class="about_company-container">
+                                <a name="o_lompanii" id="o_kompanii"></a>
+                                <p class="prev-text"><span>о компании</span></p>
+                                <div class="flex">
+                                    <img src="/static/images/underspan.png" class="picture2">
+                                </div>
+                                <p class="prev-small-text">Мы - команда энтузиастов своего дела.</p>
+                                <p class="about-company-text">Первый потолок мы сделали 10 лет назад и с тех пор <br> продолжаем работать и развиваться в этой сфере. <br> Мы знаем все нюансы и тонкости своей работы. И мы ее любим!</p>
+                                <p class="about-company-text">Сегодня "Красный Кот" предоставляет высококачественные и<br> профессиональные услуги по установке натяжных потолков<br> в городе Шахты и других городах Ростовской области.</p>
+                                <div class="flex">   
+                                    <button type="button" class="btn-grey" id="btn-grey">подробнее</button>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="form-section">
+            <div class="container">
+                <div class="row">
+                    <div class="flex">
+                        <div class="red-contur col-lg-8 col-md-8 hidden-xs hidden-sm">
+                            <div style="clear: both;"></div>
+                            <form class="form-section-item" style="display: block;">
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="col-lg-12 col-md-12">
+                                        <h3>бесплатно рассчитаем</h3>
+                                        <h4>стоимость потолка для Вас</h5>
+                                    </div>
+                                </div>
+                                <div style="clear: both;"></div>
+                                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                    <div class="col-md-12 col-lg-12">
+                                        <input type="number" class="form-section-item-input" name="room_a" required placeholder="Длина комнаты">
+                                        <input type="number" class="form-section-item-input" name="room_b" required placeholder="Ширина комнаты">
+                                    </div>
+                                    <div style="clear: both;"></div>
+                                    <div class="col-lg-12 col-md-12">
+                                        <label for="contact-name" class="lable1">
+                                            <input type="text" id="contact-name" required class="form-section-item-input" name="name" placeholder="Ваше имя">
+                                            <i class="far fa-user ico1"></i>
+                                        </label>
+                                        <label for="contact-name" class="lable1">
+                                            <input type="text" id="contact-name" required class="form-section-item-input" name="contact_phone" placeholder="Ваш телефон">
+                                            <i class="fas fa-phone-volume rotate ico1"></i>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 hidden-xs hidden-sm">
+                                        <div class="flex margin">
+                                            <button class="btn-form" type="submit">рассчитать стоимость</button>
+                                        </div>
+                                    </div>  
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 margin">
+                                    <div class="col-lg-12 col-md-12" id="custom-radio-container">
+                                        <label for="radio1" class="custom_label flex active">
+                                            <input type="radio" id="radio1" checked value="Матовый потолок" name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">Матовый потолок</p>
+                                            </div>
+                                        </label>
+                                        <label for="radio2" class="custom_label flex">
+                                            <input type="radio" id="radio2" value="Цветной потолок" name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">Цветной потолок</p>
+                                            </div>
+                                        </label>
+                                        <label for="radio3" class="custom_label flex">
+                                            <input type="radio" id="radio3" value="2-х уровневый потолок" name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">2-х уровневый потолок</p>
+                                            </div>
+                                        </label>
+                                        <label for="radio4" class="custom_label flex">
+                                            <input type="radio" id="radio4" value="Фотопечать" name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">Фотопечать</p>
+                                            </div>
+                                        </label>
+                                        <label for="radio5" class="custom_label flex">
+                                            <input type="radio" id="radio5" value="Глянцевый потолок" name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">Глянцевый потолок</p>
+                                            </div>
+                                        </label>
+                                        <label for="radio6" class="custom_label flex">
+                                            <input type="radio" id="radio6" value="Парящий потолок" name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">Парящий потолок</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div style="clear: both;"></div>
+                                <div class="col-sm-12 col-xs-12 hidden-lg hidden-md">
+                                    <div class="margin">
+                                        <div class="flex">
+                                            <button class="btn-form" type="submit">рассчитать стоимость</button>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </form>
+                            <div style="clear: both;"></div>
+                        </div>
+                        <div class="red-contur col-lg-8 col-md-8 hidden-md hidden-lg">
+                            <form class="form-section-item">
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="col-lg-12 col-md-12">
+                                        <h3>бесплатно рассчитаем</h3>
+                                        <h4>стоимость потолка для Вас</h5>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="col-md-6 col-lg-6">
+                                        <input type="number" class="form-section-item-input" name="room_a" required placeholder="Длина комнаты">
+                                        <input type="number" class="form-section-item-input" name="room_b" required placeholder="Ширина комнаты">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <label for="contact-name" class="lable1">
+                                            <input type="text" id="contact-name" class="form-section-item-input" name="name" placeholder="Ваше имя">
+                                            <i class="far fa-user ico1"></i>
+                                        </label>
+                                        <label for="contact-name" class="lable1">
+                                            <input type="text" id="contact-name" class="form-section-item-input" name="contact_phone" placeholder="Ваш телефон">
+                                            <i class="fas fa-phone-volume rotate ico1"></i>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 hidden-xs hidden-sm">
+                                        <div class="flex margin">
+                                            <button class="btn-form" type="submit">рассчитать стоимость</button>
+                                        </div>
+                                    </div>  
+                                </div>
+                                <div class="col-lg-4 col-md-4 hidden-sm hidden-xs margin">
+                                    <div class="col-lg-12 col-md-12">
+                                        <label for="radio1" class="custom_label flex">
+                                            <input type="radio" id="radio1" value="Матовый потолок" checked name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">Матовый потолок</p>
+                                            </div>
+                                        </label>
+                                        <label for="radio2" class="custom_label flex">
+                                            <input type="radio" id="radio2" value="Цветной потолок" name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">Цветной потолок</p>
+                                            </div>
+                                        </label>
+                                        <label for="radio3" class="custom_label flex">
+                                            <input type="radio" id="radio3" value="2-х уровневый потолок" name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">2-х уровневый потолок</p>
+                                            </div>
+                                        </label>
+                                        <label for="radio4" class="custom_label flex">
+                                            <input type="radio" id="radio4" value="Фотопечать" name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">Фотопечать</p>
+                                            </div>
+                                        </label>
+                                        <label for="radio5" class="custom_label flex">
+                                            <input type="radio" id="radio5" value="Глянцевый потолок" name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">Глянцевый потолок</p>
+                                            </div>
+                                        </label>
+                                        <label for="radio6" class="custom_label flex">
+                                            <input type="radio" id="radio6" value="Парящий потолок" name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">Парящий потолок</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="hidden-lg hidden-md col-lg-12 col-md-12 margin">
+                                    <div class="col-lg-6 col-md-6">
+                                        <label for="radio1" class="custom_label flex active">
+                                            <input type="radio" id="radio1" value="Матовый потолок" checked name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">Матовый потолок</p>
+                                            </div>
+                                        </label>
+                                        <label for="radio2" class="custom_label flex">
+                                            <input type="radio" id="radio2" value="Цветной потолок" name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">Цветной потолок</p>
+                                            </div>
+                                        </label>
+                                        <label for="radio3" class="custom_label flex">
+                                            <input type="radio" id="radio3" value="2-х уровневый потолок" name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">2-х уровневый потолок</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6">
+                                        <label for="radio4" class="custom_label flex">
+                                            <input type="radio" id="radio4" value="Фотопечать" name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">Фотопечать</p>
+                                            </div>
+                                        </label>
+                                        <label for="radio5" class="custom_label flex">
+                                            <input type="radio" id="radio5" value="Глянцевый потолок" name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">Глянцевый потолок</p>
+                                            </div>
+                                        </label>
+                                        <label for="radio6" class="custom_label flex">
+                                            <input type="radio" id="radio6" value="Парящий потолок" name="radio" class="hide_radio">
+                                            <div class="radio_content">
+                                                <div class="custom_radio">
+                                                    <div class="custom-center" id="custom-center"></div>
+                                                </div>
+                                                <p class="radio_text">Парящий потолок</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xs-md hidden-lg hidden-md">
+                                    <div class="margin">
+                                        <div class="flex">
+                                            <button class="btn-form" type="button">рассчитать стоимость</button>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="uslugi_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 uslugi_content">
+                        <div class="uslugi_prev_container">
+                            <div class="uslugi_prev_item">
+                                <a name="uslugi" id="uslugi"></a>
+                                <p class="prev-text"><span>услуги</span></p>
+                                <div class="flex">
+                                    <img src="/static/images/picture2.png" class="picture2">
+                                </div>
+                                <h4 class="uslugi-under">фактуры натяжных потолков</h4>
+                            </div>
+                        </div>
+                        <div class="uslugi_main_content_container">
+                            <div class="uslugi_carousel_item_container col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                <div class="uslugi_carousel_item">
+                                    <div class="uslugi_carousel_image">
+                                        <img src="/static/images/roof_gl.png" class="carousel_iimage">
+                                    </div>
+                                    <div class="uslugi_item_wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <p class="uslugi_item_name">Глянцевый потолок</p>
+                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+                                            <div class="uslugi_item_text_container">
+                                                <p class="uslugi_item_text"><span><i class="far fa-check-square bold"></i></span> Бесплатный сервис</p>
+                                                <p class="uslugi_item_text"><span><i class="far fa-check-square bold"></i></span> Качественный монтаж</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+                                            <div class="flex">
+                                                <button type="button" class="uslugi_item_button">подробнее</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uslugi_carousel_item_container col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <div class="uslugi_carousel_item">
+                                        <div class="uslugi_carousel_image">
+                                            <img src="/static/images/roof_mat.png" class="carousel_iimage">
+                                        </div>
+                                        <div class="uslugi_item_wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <p class="uslugi_item_name">Матовый потолок</p>
+                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+                                                <div class="uslugi_item_text_container">
+                                                    <p class="uslugi_item_text"><span><i class="far fa-check-square bold"></i></span> Бесплатный сервис</p>
+                                                    <p class="uslugi_item_text"><span><i class="far fa-check-square bold"></i></span> Качественный монтаж</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+                                                <div class="flex">
+                                                    <button type="button" class="uslugi_item_button">подробнее</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="uslugi_carousel_item_container col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                    <div class="uslugi_carousel_item">
+                                        <div class="uslugi_carousel_image">
+                                            <img src="/static/images/roof_satin.png" class="carousel_iimage">
+                                        </div>
+                                        <div class="uslugi_item_wrapper col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <p class="uslugi_item_name">Сатиновый потолок</p>
+                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+                                                <div class="uslugi_item_text_container">
+                                                    <p class="uslugi_item_text"><span><i class="far fa-check-square bold"></i></span> Бесплатный сервис</p>
+                                                    <p class="uslugi_item_text"><span><i class="far fa-check-square bold"></i></span> Качественный монтаж</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6">
+                                                <div class="flex">
+                                                    <button type="button" class="uslugi_item_button">подробнее</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="uslugi_end_container">
+                                <h4 class="uslugi-under">Технологии натяжных потолков</h4>
+                                <div id="testCarousel" class="carousel slide hidden-xs" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#testCarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#testCarousel" data-slide-to="1" class=""></li>
+                                        <li data-target="#testCarousel" data-slide-to="2" class=""></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <div class="uslugi_carousel_item_container col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                <div class="uslugi_carousel_item1 flex">
+                                                    <div class="carousel-text-container">
+                                                        <p class="carousel-text">двухуровневые</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uslugi_carousel_item_container col-lg-3 col-md-3 col-sm-6 hidden-xs">
+                                                <div class="uslugi_carousel_item2 flex">
+                                                    <div class="carousel-text-container">
+                                                        <p class="carousel-text">светопропускающие</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uslugi_carousel_item_container col-lg-3 col-md-3 hidden-sm hidden-xs">
+                                                <div class="uslugi_carousel_item3 flex">
+                                                    <div class="carousel-text-container">
+                                                        <p class="carousel-text">с фотопечатью</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uslugi_carousel_item_container col-lg-3 col-md-3 hidden-sm hidden-xs">
+                                                <div class="uslugi_carousel_item4 flex">
+                                                    <div class="carousel-text-container">
+                                                        <p class="carousel-text">звёздное небо</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="uslugi_carousel_item_container col-lg-3 col-md-3 hidden-sm hidden-xs">
+                                                <div class="uslugi_carousel_item1 flex">
+                                                    <div class="carousel-text-container">
+                                                        <p class="carousel-text">двухуровневые</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uslugi_carousel_item_container col-lg-3 col-md-3 hidden-sm col-xs-12">
+                                                <div class="uslugi_carousel_item2 flex">
+                                                    <div class="carousel-text-container">
+                                                        <p class="carousel-text">светопропускающие</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uslugi_carousel_item_container col-lg-3 col-md-3 col-sm-6 hidden-xs">
+                                                <div class="uslugi_carousel_item3 flex">
+                                                    <div class="carousel-text-container">
+                                                        <p class="carousel-text">с фотопечатью</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uslugi_carousel_item_container col-lg-3 col-md-3 col-sm-6 hidden-xs">
+                                                <div class="uslugi_carousel_item4 flex">
+                                                    <div class="carousel-text-container">
+                                                        <p class="carousel-text">звёздное небо</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="uslugi_carousel_item_container col-lg-3 col-md-3 hidden-sm hidden-xs">
+                                                <div class="uslugi_carousel_item1 flex">
+                                                    <div class="carousel-text-container">
+                                                        <p class="carousel-text">двухуровневые</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uslugi_carousel_item_container col-lg-3 col-md-3 col-sm-6 hidden-xs">
+                                                <div class="uslugi_carousel_item2 flex">
+                                                    <div class="carousel-text-container">
+                                                        <p class="carousel-text">светопропускающие</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uslugi_carousel_item_container col-lg-3 col-md-3 hidden-sm col-xs-12">
+                                                <div class="uslugi_carousel_item3 flex">
+                                                    <div class="carousel-text-container">
+                                                        <p class="carousel-text">с фотопечатью</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="uslugi_carousel_item_container col-lg-3 col-md-3 col-sm-6 hidden-xs">
+                                                <div class="uslugi_carousel_item4 flex">
+                                                    <div class="carousel-text-container">
+                                                        <p class="carousel-text">звёздное небо</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="testCarousel" class="carousel slide hidden-sm hidden-md hidden-lg" data-ride="carousel">
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#testCarousel" data-slide-to="0" class="active"></li>
+                                            <li data-target="#testCarousel" data-slide-to="1" class=""></li>
+                                            <li data-target="#testCarousel" data-slide-to="2" class=""></li>
+                                            <li data-target="#testCarousel" data-slide-to="3" class=""></li>
+                                        </ol>
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <div class="uslugi_carousel_item_container col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                    <div class="uslugi_carousel_item1 flex">
+                                                        <div class="carousel-text-container">
+                                                            <p class="carousel-text">двухуровневые</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uslugi_carousel_item_container col-lg-3 col-md-3 col-sm-6 hidden-xs">
+                                                    <div class="uslugi_carousel_item2 flex">
+                                                        <div class="carousel-text-container">
+                                                            <p class="carousel-text">светопропускающие</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uslugi_carousel_item_container col-lg-3 col-md-3 hidden-sm hidden-xs">
+                                                    <div class="uslugi_carousel_item3 flex">
+                                                        <div class="carousel-text-container">
+                                                            <p class="carousel-text">с фотопечатью</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uslugi_carousel_item_container col-lg-3 col-md-3 hidden-sm hidden-xs">
+                                                    <div class="uslugi_carousel_item4 flex">
+                                                        <div class="carousel-text-container">
+                                                            <p class="carousel-text">звёздное небо</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="uslugi_carousel_item_container col-lg-3 col-md-3 hidden-sm hidden-xs">
+                                                    <div class="uslugi_carousel_item1 flex">
+                                                        <div class="carousel-text-container">
+                                                            <p class="carousel-text">двухуровневые</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uslugi_carousel_item_container col-lg-3 col-md-3 hidden-sm col-xs-12">
+                                                    <div class="uslugi_carousel_item2 flex">
+                                                        <div class="carousel-text-container">
+                                                            <p class="carousel-text">светопропускающие</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uslugi_carousel_item_container col-lg-3 col-md-3 col-sm-6 hidden-xs">
+                                                    <div class="uslugi_carousel_item3 flex">
+                                                        <div class="carousel-text-container">
+                                                            <p class="carousel-text">с фотопечатью</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uslugi_carousel_item_container col-lg-3 col-md-3 col-sm-6 hidden-xs">
+                                                    <div class="uslugi_carousel_item4 flex">
+                                                        <div class="carousel-text-container">
+                                                            <p class="carousel-text">звёздное небо</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="uslugi_carousel_item_container col-lg-3 col-md-3 hidden-sm hidden-xs">
+                                                    <div class="uslugi_carousel_item1 flex">
+                                                        <div class="carousel-text-container">
+                                                            <p class="carousel-text">двухуровневые</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uslugi_carousel_item_container col-lg-3 col-md-3 col-sm-6 hidden-xs">
+                                                    <div class="uslugi_carousel_item2 flex">
+                                                        <div class="carousel-text-container">
+                                                            <p class="carousel-text">светопропускающие</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uslugi_carousel_item_container col-lg-3 col-md-3 hidden-sm col-xs-12">
+                                                    <div class="uslugi_carousel_item3 flex">
+                                                        <div class="carousel-text-container">
+                                                            <p class="carousel-text">с фотопечатью</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uslugi_carousel_item_container col-lg-3 col-md-3 col-sm-6 hidden-xs">
+                                                    <div class="uslugi_carousel_item4 flex">
+                                                        <div class="carousel-text-container">
+                                                            <p class="carousel-text">звёздное небо</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="uslugi_carousel_item_container col-lg-3 col-md-3 hidden-sm hidden-xs">
+                                                    <div class="uslugi_carousel_item1 flex">
+                                                        <div class="carousel-text-container">
+                                                            <p class="carousel-text">двухуровневые</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uslugi_carousel_item_container col-lg-3 col-md-3 col-sm-6 hidden-xs">
+                                                    <div class="uslugi_carousel_item2 flex">
+                                                        <div class="carousel-text-container">
+                                                            <p class="carousel-text">светопропускающие</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uslugi_carousel_item_container col-lg-3 col-md-3 hidden-sm hidden-xs">
+                                                    <div class="uslugi_carousel_item3 flex">
+                                                        <div class="carousel-text-container">
+                                                            <p class="carousel-text">с фотопечатью</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="uslugi_carousel_item_container col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                                    <div class="uslugi_carousel_item4 flex">
+                                                        <div class="carousel-text-container">
+                                                            <p class="carousel-text">звёздное небо</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="preim-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <p class="prev_preim_text">Закажите бесплатный замер прямо сейчас!</p>
+                            </div>
+                        </div>  
+                        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                            <div class="preim_item">
+                                <div class="col-lg-2 col-md-2 col-xs-3 col-sm-2">
+                                    <p class="preim_item_text1"><span><i class="far fa-check-square bold"></i></span></p>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-xs-9 col-sm-10">
+                                    <p class="preim_item_text2">Скидка на каждый третий натяжной потлок 20%</p>
+                                </div>
+                            </div>
+                            <div class="preim_item">
+                                    <div class="col-lg-2 col-md-2 col-xs-3 col-sm-3">
+                                        <p class="preim_item_text1"><span><i class="far fa-check-square bold"></i></span></p>
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-xs-9 col-sm-9">
+                                        <p class="preim_item_text2">Каждый 5-ый светильник в подарок</p>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 flex">
+                        <form class="red-form col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                <p class="red-form-upper-text">Вызвать замерщика<br><span class="sp1">бесплатно уже сегодня</span></p>
+                                <p class="red-form-prize"><span>подарки по акции</span></p>
+                                <input type="text" name="contact_phone" placeholder="Номер телефона" required class="calculator-input">
+                                <button type="submit" class="calculator-button">оставить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="wcu">
+            <div class="container">
+                <div class="row">
+                    <div class="wcu_content col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                        <a name="preim" id="preim"></a>
+                        <p class="prev-text"><span>преимущества</span></p>
+                        <div class="flex">
+                            <img src="/static/images/underspan.png" class="picture2">
+                        </div>
+                        <div class="wcu_item_container col-lg-6 col-sm-6 col-xs-12 col-md-12">
+                            <div class="wcu_item col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                                <div class="wcu_item_image col-lg-5 col-sm-4 col-xs-3 col-md-5 flex">
+                                    <img src="/static/images/bank.png" class="wcu_image">
+                                </div>
+                                <div class="wcu_item_text_container col-lg-7 col-sm-8 col-xs-9 col-md-7">
+                                    <p class="wcu_item_text"><span class="sp2">Доступные цены</span><br>Мы работаем напрямую с производителем полотна. Будьте уверены, Вы получите материал по цене производителя!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wcu_item_container col-lg-6 col-sm-6 col-xs-12 col-md-12">
+                            <div class="wcu_item col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                                <div class="wcu_item_image col-lg-5 col-sm-4 col-xs-3 col-md-5 flex">
+                                    <img src="/static/images/clock.png" class="wcu_image">
+                                </div>
+                                <div class="wcu_item_text_container col-lg-7 col-sm-8 col-xs-9 col-md-7">
+                                    <p class="wcu_item_text"><span class="sp2">Сделаем быстро и качественно</span><br>За 10 лет работы мы накопили богатый опыт. Сегодня у нас уже несколько профессиональных бригад, поэтому мы будем рады выполнить Ваш заказ оперативно и качественно. А ещё, после нас всегда чисто!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wcu_item_container col-lg-6 col-sm-6 col-xs-12 col-md-12">
+                            <div class="wcu_item col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                                <div class="wcu_item_image col-lg-5 col-sm-4 col-xs-3 col-md-5 flex">
+                                    <img src="/static/images/like.png" class="wcu_image">
+                                </div>
+                                <div class="wcu_item_text_container col-lg-7 col-sm-8 col-xs-9 col-md-7">
+                                    <p class="wcu_item_text"><span class="sp2">Результат понравится всем</span><br>Многообразие материалов, форм, текстур и цветов позволяют создать для Вас уникальные шедевры. Многоуровневые потолки с подсветкой и перфорацией не оставят равнодушными Вас и Ваших гостней! </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wcu_item_container col-lg-6 col-sm-6 col-xs-12 col-md-12">
+                            <div class="wcu_item col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                                <div class="wcu_item_image col-lg-5 col-sm-4 col-xs-3 col-md-5 flex">
+                                    <img src="/static/images/chest.png" class="wcu_image">
+                                </div>
+                                <div class="wcu_item_text_container col-lg-7 col-sm-8 col-xs-9 col-md-7">
+                                    <p class="wcu_item_text"><span class="sp2">Обеспечим безопасность</span><br>При монтаже мы используем только безопасное оборудование. А все наши полотна имеют экологические сертификаты. все надежно и безопасно, не сомневайтесь!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portfolio">
+            <div class="container">
+                <div class="row">
+                    <a name="portfolio" id="portfolio"></a>
+                    <p class="prev-text"><span>портфолио</span></p>
+                    <div class="flex">
+                        <img src="/static/images/picture2.png" class="picture2">
+                    </div>
+                </div>
+            </div>
+            <div class="gallery_content">
+                <div class="gallery_container" id="first">
+                    <div class="gallery_item">
+                        <img src="/static/images/1.png" class="miniature">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="/static/images/2.png" class="miniature">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="/static/images/3.png" class="miniature">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="/static/images/4.png" class="miniature">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="/static/images/5.png" class="miniature">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="dop_wcu col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                        <div class="dop_wcu_image_container col-lg-6 col-md-6 hidden-xs hidden-sm flex">
+                            <img src="/static/images/wcu_big_img.png" class="dop_wcu_image">
+                        </div>
+                        <div class="dop_wcu_text_container col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                            <p class="dop_wcu_big_text">Мы работаем только с <span class="wcu_sp">безопасным</span> оборудованием</p>
+                            <p class="dop_wcu_text">Были случаи, когда во время установки потолков взрывался газовый баллон. Чтобы избежать этого, нужно выбирать надежный подрядчиков и уточнять у них, каким оборудованием они пользуются для разогревания пленки. Мы используем полимерно - композитные баллоны, которые не разрываются, не подвергаются коррозии, на них стоит клапан, регулируюший давление. Такие баллоны считаются «взрывобезопасными» и на 100% безопасными для Вас и Вашего дома.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="motivate-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
+                        <p class="motivate-section_text"><span>сделайте первый шаг!</span><br>оставьте заявку на бесплатный<br>выезд замерщика, прямо сейчас!</p>
+                        <p class="motivate-section_small-text">При вызове замерщика в день обращения, скидка - <span>10%</span></p>
+                        <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 flex">
+                            <button class="button-slogan center" type="button" id="motivate-button">оставить заявку</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 white">
+                        <a name="contacti" id="contacti"></a>
+                        <p class="prev-text"><span>контакты</span></p>
+                        <div class="flex">
+                            <img src="/static/images/picture2.png" class="picture2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts-section-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2684.8792611016765!2d40.21344181597336!3d47.70618157919138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e216a5d10984f9%3A0x5702195cebedfd57!2z0YPQuy4g0KjQtdCy0YfQtdC90LrQviwgMTIzLCAyINGN0YLQsNC2LCDQqNCw0YXRgtGLLCDQoNC-0YHRgtC-0LLRgdC60LDRjyDQvtCx0LsuLCAzNDY1MDA!5e0!3m2!1sru!2sru!4v1566318066071!5m2!1sru!2sru" width="100%" height="450" frameborder="0" style="border:0; position: absolute;"></iframe>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-lg-8 col-sm-6 hidden-xs"></div>
+                    <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 flex content_contacts-section">
+                        <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 wb">
+                            <div class="col-lg-12 col-xs-12 col-sm-12">
+                                <div class="col-lg-3 col-sm-3 col-md-3 col-xs-3">
+                                    <p><span class="span_contact_section"><i class="fas fa-phone-volume rotate span_contact_section"></i></span></p>
+                                </div>
+                                <div class="col-lg-9 col-sm-9 col-xs-9 col-md-9">
+                                    <p class="contact-text"> +7 (900) 124-07-00</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xs-12 col-sm-12">
+                                <div class="col-lg-3 col-sm-3 col-md-3 col-xs-3">
+                                    <p><span class="span_contact_section"><i class="far fa-envelope special-height"></i></span></p>
+                                </div>
+                                <div class="col-lg-9 col-sm-9 col-xs-9 col-md-9">
+                                    <p class="contact-text"> example@exmaple.com</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xs-12 col-sm-12">
+                                <div class="col-lg-3 col-sm-3 col-md-3 col-xs-3">
+                                    <p><span class="span_contact_section"><i class="fas fa-map-marker-alt special-height"></i></span></p>
+                                </div>
+                                <div class="col-lg-9 col-sm-9 col-xs-9 col-md-9">
+                                    <p class="contact-text"> Шахты,Шевченко 123<br>Дом быта, 2 этаж</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12">
+                                <div class="flex">   
+                                    <button type="button" class="btn-grey" id="btn-grey">свяжитесь с нами</button>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-xs-12 col-md-12 col-sm-12">
+                        <div class="flex">
+                            <div class="footer-text-container">
+                                <!-- <p class="footer-text"><span><a href="https://vector-itschool.ru/">IT-компания Vector ©</a></span> 2018. Все права защищены</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="/static/js/jquery-3.7.1.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+        <script src="/static/js/scripts.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('.menu-item').on('click', function () {
+                    const link = $(this).find('a[href^="#"]');
+                    if (link.length) {
+                        const targetId = link.attr('href');
+                        const $target = $(targetId);
+                        if ($target.length) {
+                            $('html, body').animate({
+                                scrollTop: $target.offset().top
+                            }, 500);
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

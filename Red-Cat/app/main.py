@@ -1,44 +1,67 @@
-from fastapi import FastAPI, HTTPException
-from fastapi.responses import HTMLResponse
+from fastapi import FastAPI, Request, HTTPException
+from sqladmin import Admin
+from app.db.session import engine
+from app.admin.views import UserAdmin, OrderAdmin
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.exc import IntegrityError
-from .models import Application, Base
+from fastapi.templating import Jinja2Templates
+from fastapi.responses import HTMLResponse, JSONResponse
 
-SQLALCHEMY_DATABASE_URL = "sqlite:///./database.db"
-
-engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False})
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-Base.metadata.create_all(bind=engine)
+from fastapi import Depends, HTTPException
+from sqlalchemy.ext.asyncio import AsyncSession
+from app.db.models.orders import Orders
+from app.db.session import AsyncSessionLocal
+from pydantic import BaseModel, Field
+from typing import Optional
 
 app = FastAPI()
 
-# Подключаем статичные файлы
-app.mount("/static", StaticFiles(directory="frontend"), name="static")
+# Настройка панели администратора
+admin = Admin(app, engine)
+admin.add_view(UserAdmin)
+admin.add_view(OrderAdmin)
 
-# Основной GET запрос, который будет отдавать твой HTML-файл
+# Подключение статики и шаблонов
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
+templates = Jinja2Templates(directory="app/templates")
+
 @app.get("/", response_class=HTMLResponse)
-async def read_index():
-    with open("frontend/index.html", encoding="utf-8") as f:
-        return HTMLResponse(content=f.read(), status_code=200)
+async def read_root(request: Request):
+    return templates.TemplateResponse("index.html", {"request": request})
 
-class ApplicationCreate(BaseModel):
+
+# 📦 Pydantic-схема для валидации данных
+class OrderCreate(BaseModel):
     name: str
-    ceiling_area: int
-    phone: str
+    contact_phone: str
+    area: float = Field(ge=0)
+    canvas_type: Optional[str] = ""
+    comment: Optional[str] = ""
 
-@app.post("/applications/")
-def create_application(application: ApplicationCreate):
-    db = SessionLocal()
-    db_application = Application(**application.dict())
-    db.add(db_application)
+
+# ⚙️ Зависимость для подключения сессии
+async def get_db_session() -> AsyncSession:
+    async with AsyncSessionLocal() as session:
+        yield session
+
+
+# 🚀 POST /apply
+@app.post("/apply")
+async def apply_order(
+    order: OrderCreate,
+    db: AsyncSession = Depends(get_db_session)
+):
     try:
-        db.commit()
-        db.refresh(db_application)
-    except IntegrityError:
-        db.rollback()
-        raise HTTPException(status_code=400, detail="Ошибка при сохранении заявки")
-    db.close()
-    return db_application
+        new_order = Orders(
+            name=order.name,
+            contact_phone=order.contact_phone,
+            area=order.area,
+            canvas_type=order.canvas_type,
+            comment=order.comment,
+        )
+        db.add(new_order)
+        await db.commit()
+        await db.refresh(new_order)
+        return JSONResponse(status_code=200, content={"message": "Заявка успешно зарегистрирована"})    
+    except Exception as e:
+        await db.rollback()
+        raise HTTPException(status_code=500, detail=f"Ошибка при сохранении заявки: {e}")
